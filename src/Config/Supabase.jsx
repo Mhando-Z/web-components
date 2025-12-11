@@ -26,5 +26,11 @@ const supabaseKey4 =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltbmZwdnhoZmp6amZpZ2djbXVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI1Njk2MDgsImV4cCI6MjA1ODE0NTYwOH0.dz4Y7NjkcBitzRmmOpDVMc60mrQQrcm-DgUVUijlAb0";
 const supabase4 = createClient(supabaseUrl4, supabaseKey4);
 
+// First Supabase project (Account 1)
+const supabaseUrl5 = "https://kxhkybvdnudbqxdhwzvv.supabase.co";
+const supabaseKey5 =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt4aGt5YnZkbnVkYnF4ZGh3enZ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAxMjcwNjYsImV4cCI6MjA3NTcwMzA2Nn0.oRiPLMBSA6qs4VQHbqlseusRh9e5oaDNCtO762hv994";
+
+const supabase5 = createClient(supabaseUrl5, supabaseKey5);
 // Export them individually or as an object
-export { supabase1, supabase2, supabase3, supabase4 };
+export { supabase1, supabase2, supabase3, supabase4, supabase5 };

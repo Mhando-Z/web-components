@@ -4,9 +4,8 @@ import React, { useContext } from "react";
 import DataContext from "@/context/DataContext";
 
 function page() {
-  const { products } = useContext(DataContext);
-  const { house } = useContext(DataContext);
-  const { news } = useContext(DataContext);
+  const { products, house, news } = useContext(DataContext);
+  const { quotes } = useContext(DataContext);
   return (
     <div className="bg-linear-to-b font-roboto text-white min-h-screen from-slate-900 via-blue-950 to-blue-950">
       <div className="md:mt-20 container flex flex-col gap-5 mx-auto ">

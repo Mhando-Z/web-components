@@ -8,7 +8,6 @@ import { redirect } from "next/navigation";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const [showIntro, setShowIntro] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -35,33 +34,44 @@ export default function Home() {
   }, []);
   //
 
-  if (showIntro) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen">
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      {/* image section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Image
+          src={logo}
+          alt="MhdLogo"
+          className="object-cover md:w-[300px] w-[200px]  transition-all"
+        />
+      </motion.div>
+      {/* Progress bar container */}
+      <div className="w-full mt-4 justify-center flex items-center gap-x-2">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
+          className="w-full max-w-[300px] h-2 bg-gray-200 rounded-full overflow-hidden"
         >
-          <Image
-            src={logo}
-            alt="MhdLogo"
-            className="object-cover md:w-[300px] w-[200px]  transition-all"
-          />
-        </motion.div>
-        {/* Progress bar container */}
-        <div className="w-full max-w-[300px] h-2 mt-5 bg-gray-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-red-400 transition-all duration-100 ease-linear"
             style={{ width: `${progress}%` }}
           />
-        </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className=""
+        >
+          <h1 className="text-xs font-raleway font-bold text-red-500/60">
+            {progress} %
+          </h1>
+        </motion.div>
       </div>
-    );
-  }
-  return (
-    <div>
-      <div></div>
     </div>
   );
 }

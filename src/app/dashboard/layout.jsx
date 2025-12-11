@@ -12,9 +12,6 @@ import { IoKeySharp, IoPeople } from "react-icons/io5";
 import { FaMoneyBillTrendUp, FaPowerOff } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
-import { HiMiniCheckBadge } from "react-icons/hi2";
-import { BsFillPeopleFill } from "react-icons/bs";
-import { GiStairsGoal } from "react-icons/gi";
 import { RiLuggageDepositFill } from "react-icons/ri";
 
 // what vano and other supervisors can see
@@ -101,7 +98,7 @@ export default function DashboardLayout({ children }) {
                             className={`${
                               pathname === dt.path
                                 ? "bg-red-600 items-center rounded gap-x-5 text-center font-medium  text-gray-50 w-full flex flex-row py-2 px-7 mt-2"
-                                : "flex  flex-row py-2 w-full  gap-x-2 hover:transition-colors items-center hover:ease-out hover:duration-300 hover:bg-red-300 hover:text-gray-900 hover:font-medium  px-7 mt-2 text-slate-800 rounded"
+                                : "flex  flex-row py-2 w-full  gap-x-2  items-center  hover:bg-gray-200 hover:text-gray-900  px-7 mt-2 text-slate-800 rounded"
                             }`}
                           >
                             <p className="text-xl">{dt.icon}</p>

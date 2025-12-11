@@ -24,7 +24,7 @@ export default function Home() {
     }, interval);
 
     const redirectTimer = setTimeout(() => {
-      redirect("dashboard/home");
+      redirect("/home");
     }, duration);
 
     return () => {

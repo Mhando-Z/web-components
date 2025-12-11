@@ -2,6 +2,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-activity/dist/library.css";
 import "./globals.css";
+import { DataProvider } from "@/context/DataContext";
 
 export const metadata = {
   title: "Web Components",
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
           pauseOnHover
           theme="colored"
         />
-        {children}
+        <DataProvider>{children}</DataProvider>
       </body>
     </html>
   );

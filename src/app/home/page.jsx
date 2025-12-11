@@ -1,9 +1,27 @@
-import React from "react";
+"use client";
+
+import React, { useContext } from "react";
+import DataContext from "@/context/DataContext";
 
 function page() {
+  const { products } = useContext(DataContext);
   return (
-    <div className="bg-linear-to-b min-h-screen from-slate-900 via-blue-950 to-blue-950">
-      <div></div>
+    <div className="bg-linear-to-b font-roboto text-white min-h-screen from-slate-900 via-blue-950 to-blue-950">
+      <div className="md:mt-20 container mx-auto ">
+        {/* Posale section */}
+        <div>
+          <h1 className="font-bold text-4xl ">Posale section</h1>
+          <div className="flex flex-row overflow-x-scroll">
+            {products &&
+              products?.map((product) => (
+                <div key={product.id} className="border-b border-gray-700 p-4">
+                  <h2 className="text-lg font-semibold">{product.name}</h2>
+                  <p className="text-gray-400">{product.description}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

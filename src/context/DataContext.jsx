@@ -9,6 +9,7 @@ export function DataProvider({ children }) {
   const [products, setProducts] = useState();
   const [house, setHouse] = useState([]);
   const [news, setNews] = useState([]);
+  const [quotes, setQuotes] = useState([]);
 
   const fetchHouse = async () => {
     const { data: house, error } = await supabase3.from("house").select("*");

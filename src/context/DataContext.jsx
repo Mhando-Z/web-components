@@ -7,6 +7,7 @@ import {
   supabase3,
   supabase4,
   supabase5,
+  supabase6,
 } from "@/Config/Supabase";
 
 const DataContext = createContext();
@@ -17,6 +18,7 @@ export function DataProvider({ children }) {
   const [news, setNews] = useState([]);
   const [quotes, setQuotes] = useState([]);
   const [foods, setFoods] = useState([]);
+  const [research, setResearch] = useState([]);
 
   const fetchFoods = async () => {
     const { data, error } = await supabase5
@@ -65,18 +67,35 @@ export function DataProvider({ children }) {
     }
   };
 
+  const fetchResearch = async () => {
+    try {
+      const { data, error } = await supabase6
+        .from("research")
+        .select("*")
+        .order("created_at", { ascending: false }); // Sort by latest
+
+      if (error) {
+        throw error;
+      }
+
+      setResearch(data);
+    } catch (error) {}
+  };
+
   useEffect(() => {
     fetchProducts();
     fetchHouse();
     fetNews();
     fetchQts();
     fetchFoods();
+    fetchResearch();
   }, []);
 
   return (
     <DataContext.Provider
       value={{
         products,
+        research,
         house,
         news,
         quotes,

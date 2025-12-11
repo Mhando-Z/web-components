@@ -5,7 +5,7 @@ import DataContext from "@/context/DataContext";
 
 function page() {
   const { products, house, news } = useContext(DataContext);
-  const { quotes, foods } = useContext(DataContext);
+  const { quotes, foods, research } = useContext(DataContext);
 
   return (
     <div className="bg-linear-to-b font-roboto text-white min-h-screen from-slate-900 via-blue-950 to-blue-950">
@@ -73,6 +73,26 @@ function page() {
                 <div key={food.id} className="border-b border-gray-700 p-4">
                   <h2 className="text-lg font-semibold">{food.name}</h2>
                   <p className="text-gray-400">{food.description}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+        {/* Research section */}
+        <div className="mt-2">
+          <h1 className="font-bold text-4xl ">Hattz project section</h1>
+          <div className="flex flex-row overflow-x-scroll">
+            {research &&
+              research?.map((researchItem) => (
+                <div
+                  key={researchItem.id}
+                  className="border-b border-gray-700 p-4"
+                >
+                  <h2 className="text-lg line-clamp-2 font-semibold">
+                    {researchItem.title}
+                  </h2>
+                  <p className="text-gray-400 line-clamp-4">
+                    {researchItem.description}
+                  </p>
                 </div>
               ))}
           </div>

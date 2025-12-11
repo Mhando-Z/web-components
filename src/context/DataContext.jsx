@@ -1,18 +1,38 @@
 "use client";
 
 import { createContext, useEffect, useState } from "react";
-import { supabase2, supabase3 } from "@/Config/Supabase";
+import { supabase1, supabase2, supabase3, supabase4 } from "@/Config/Supabase";
 
 const DataContext = createContext();
 
 export function DataProvider({ children }) {
   const [products, setProducts] = useState();
   const [house, setHouse] = useState([]);
+  const [news, setNews] = useState([]);
 
   const fetchHouse = async () => {
     const { data: house, error } = await supabase3.from("house").select("*");
     if (!error) {
       setHouse(house);
+    }
+  };
+
+  const fetchQts = async () => {
+    const { data, error } = await supabase1.from("Quotes").select("*");
+    if (!error) {
+      setQuotes(data);
+    }
+  };
+
+  const fetNews = async () => {
+    const { data, error } = await supabase4
+      .from("news")
+      .select("*")
+      .order("created_at", { ascending: false }); // Latest first
+
+    if (!error) {
+      setNews(data);
+    } else {
     }
   };
 
@@ -32,6 +52,8 @@ export function DataProvider({ children }) {
   useEffect(() => {
     fetchProducts();
     fetchHouse();
+    fetNews();
+    fetchQts();
   }, []);
 
   return (
@@ -39,6 +61,8 @@ export function DataProvider({ children }) {
       value={{
         products,
         house,
+        news,
+        quotes,
       }}
     >
       {children}

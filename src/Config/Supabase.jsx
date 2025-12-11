@@ -20,5 +20,11 @@ const supabaseKey3 =
 
 const supabase3 = createClient(supabaseUrl3, supabaseKey3);
 
+// Second Supabase project for Crdbsacooss (Account 2)
+const supabaseUrl4 = "https://imnfpvxhfjzjfiggcmua.supabase.co";
+const supabaseKey4 =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltbmZwdnhoZmp6amZpZ2djbXVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI1Njk2MDgsImV4cCI6MjA1ODE0NTYwOH0.dz4Y7NjkcBitzRmmOpDVMc60mrQQrcm-DgUVUijlAb0";
+const supabase4 = createClient(supabaseUrl4, supabaseKey4);
+
 // Export them individually or as an object
-export { supabase1, supabase2, supabase3 };
+export { supabase1, supabase2, supabase3, supabase4 };

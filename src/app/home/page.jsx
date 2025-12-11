@@ -6,9 +6,10 @@ import DataContext from "@/context/DataContext";
 function page() {
   const { products, house, news } = useContext(DataContext);
   const { quotes } = useContext(DataContext);
+
   return (
     <div className="bg-linear-to-b font-roboto text-white min-h-screen from-slate-900 via-blue-950 to-blue-950">
-      <div className="md:mt-20 container flex flex-col gap-5 mx-auto ">
+      <div className="mt-20 container flex flex-col gap-5 mx-auto ">
         {/* Posale section */}
         <div>
           <h1 className="font-bold text-4xl ">Posale section</h1>
@@ -44,6 +45,19 @@ function page() {
                 <div key={newsItem.id} className="border-b border-gray-700 p-4">
                   <h2 className="text-lg font-semibold">{newsItem.title}</h2>
                   <p className="text-gray-400">{newsItem.content}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+        {/* Quotes section */}
+        <div className="mt-2">
+          <h1 className="font-bold text-4xl ">Quotes section</h1>
+          <div className="flex flex-row overflow-x-scroll">
+            {quotes &&
+              quotes?.map((quote) => (
+                <div key={quote.id} className="border-b border-gray-700 p-4">
+                  <h2 className="text-lg font-semibold">{quote.quote}</h2>
+                  <p className="text-gray-400">{quote.author}</p>
                 </div>
               ))}
           </div>

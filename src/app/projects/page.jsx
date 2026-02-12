@@ -26,11 +26,11 @@ const projects = [
   {
     id: 2,
     title: "Herveg Website",
-    description: "Browse and explore movies with rich details",
+    description: "Agricultural marketplace and services",
     url: "https://hervegweb.vercel.app/",
     icon: <GiVote />,
     color: "from-purple-500 to-pink-500",
-    tags: ["Entertainment", "UI/UX"],
+    tags: ["Agriculture", "UI/UX"],
   },
   {
     id: 3,
@@ -71,11 +71,11 @@ const projects = [
   {
     id: 7,
     title: "Historical Association of Tanzania",
-    description: "Agricultural marketplace and services",
+    description: "Historical research and documentation platform",
     url: "https://hattz.ac.tz/",
     icon: <VscServerProcess />,
     color: "from-teal-500 to-green-500",
-    tags: ["Agriculture", "E-commerce"],
+    tags: ["History", "Research"],
   },
 ];
 

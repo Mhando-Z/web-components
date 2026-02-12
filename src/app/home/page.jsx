@@ -2,6 +2,7 @@
 
 import React, { useContext } from "react";
 import DataContext from "@/context/DataContext";
+import MyProjects from "./MyProjects";
 
 function page() {
   const { products, house, news } = useContext(DataContext);
@@ -169,6 +170,10 @@ function page() {
             <p className="text-gray-500 italic">No research available</p>
           )}
         </Section>
+      </div>
+      {/* My projects */}
+      <div>
+        <MyProjects />
       </div>
     </div>
   );

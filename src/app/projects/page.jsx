@@ -63,7 +63,7 @@ const projects = [
     id: 6,
     title: "CRDB Saccos",
     description: "Banking and financial services management",
-    url: "https://crdbworkers-saccos.vercel.app/",
+    url: "https://www.crdbsaccos.co.tz",
     icon: <BsClipboardDataFill />,
     color: "from-rose-500 to-pink-500",
     tags: ["Finance", "Banking"],

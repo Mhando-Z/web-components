@@ -27,7 +27,7 @@ const projects = [
     id: 2,
     title: "Herveg Website",
     description: "Agricultural marketplace and services",
-    url: "https://hervegweb.vercel.app/",
+    url: "https://www.herveg.org/",
     icon: <GiVote />,
     color: "from-green-500 to-emerald-500",
     tags: ["Agriculture", "UI/UX"],

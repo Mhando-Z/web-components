@@ -45,7 +45,7 @@ const projects = [
     id: 4,
     title: "Necta Results",
     description: "Educational examination results portal",
-    url: "https://necta-results.vercel.app/",
+    url: "https://nectaresults.vercel.app/",
     icon: <BsClipboardDataFill />,
     color: "from-blue-500 to-cyan-500",
     tags: ["Education", "Data"],

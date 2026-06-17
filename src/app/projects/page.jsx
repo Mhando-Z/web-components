@@ -81,7 +81,7 @@ const projects = [
     id: 8,
     title: "Herveg05",
     description: "Agricultural marketplace and services",
-    url: "https://herveg-mhandozs-projects.vercel.app/",
+    url: "https://app.herveg.org/",
     icon: <VscServerProcess />,
     color: "from-teal-500 to-green-500",
     tags: ["Agriculture", "E-commerce"],

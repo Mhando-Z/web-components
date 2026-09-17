@@ -107,7 +107,7 @@ const projects = [
     url: "https://auroraspareparts.vercel.app/",
     icon: <HiMiniWrenchScrewdriver />,
     color: "from-green-500 to-blue-500",
-    tags: ["History", "Research"],
+    tags: ["Marketplace", "Logistics"],
   },
 ];
 
@@ -181,7 +181,7 @@ function MyProjects() {
                 whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleCancel}
-                className="text-2xl sm:text-3xl text-slate-400 hover:text-emerald-400 transition-all duration-300 p-2 sm:p-3 rounded-full hover:bg-white/5 backdrop-blur-sm border border-transparent hover:border-emerald-500/30"
+                className="text-2xl hidden sm:text-3xl text-slate-400 hover:text-emerald-400 transition-all duration-300 p-2 sm:p-3 rounded-full hover:bg-white/5 backdrop-blur-sm border border-transparent hover:border-emerald-500/30"
               >
                 <RxCrossCircled />
               </motion.button>
@@ -194,7 +194,7 @@ function MyProjects() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12"
+          className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {projects.map((project) => (

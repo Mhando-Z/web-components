@@ -154,7 +154,7 @@ function MyProjects() {
       <div className="relative  z-10 w-full min-h-screen">
         {/* Header */}
         <div className="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-xl border-b border-white/10 shadow-2xl">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center justify-between">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}

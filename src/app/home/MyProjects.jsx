@@ -95,6 +95,17 @@ const projects = [
     color: "from-cyan-500 to-blue-500",
     tags: ["History", "Research"],
   },
+  {
+    id: 10,
+    title: "Aurora Spare Parts",
+    description:
+      "Aurora Marketplace is a digital marketplace for motorcycle spare parts, designed to connect suppliers, retailers, mechanics, riders, and other participants in the motorcycle aftermarket ecosystem.",
+
+    url: "https://auroraspareparts.vercel.app/",
+    icon: <GiVote />,
+    color: "from-cyan-500 to-blue-500",
+    tags: ["History", "Research"],
+  },
 ];
 
 function MyProjects() {

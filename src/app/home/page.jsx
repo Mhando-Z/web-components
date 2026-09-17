@@ -7,6 +7,7 @@ import MyProjects from "./MyProjects";
 function page() {
   const { products, house, news } = useContext(DataContext);
   const { quotes, foods, research } = useContext(DataContext);
+  const { productListings } = useContext(DataContext);
 
   const Section = ({ title, children }) => (
     <section className="mb-16">
@@ -51,6 +52,25 @@ function page() {
                 <p className="text-gray-400 leading-relaxed">
                   {product.description}
                 </p>
+              </Card>
+            ))
+          ) : (
+            <p className="text-gray-500 italic">No products available</p>
+          )}
+        </Section>
+
+        {/* Posale section */}
+        <Section title="Aurora Spare Parts">
+          {productListings && productListings.length > 0 ? (
+            productListings?.map((product) => (
+              <Card key={product.id}>
+                <h3 className="text-xl font-semibold mb-3 text-blue-300">
+                  {product.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {product.description}
+                </p>
+                <p className="text-gray-400 leading-relaxed">{product.price}</p>
               </Card>
             ))
           ) : (

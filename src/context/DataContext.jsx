@@ -8,6 +8,7 @@ import {
   supabase4,
   supabase5,
   supabase6,
+  supabase7,
 } from "@/Config/Supabase";
 
 const DataContext = createContext();
@@ -18,6 +19,7 @@ export function DataProvider({ children }) {
   const [news, setNews] = useState([]);
   const [quotes, setQuotes] = useState([]);
   const [foods, setFoods] = useState([]);
+  const [productListings, setProductsListings] = useState([]);
   const [research, setResearch] = useState([]);
 
   const fetchFoods = async () => {
@@ -26,6 +28,16 @@ export function DataProvider({ children }) {
       .select("*")
       .order("created_at", { ascending: false });
     if (!error) setFoods(data);
+  };
+
+  const fetchProductsListings = async () => {
+    const { data, error } = await supabase7
+      .from("product_listings")
+      .select("*")
+      .eq("status", "published")
+      .order("created_at", { ascending: false });
+
+    if (!error) setProductsListings(data);
   };
 
   const fetchHouse = async () => {
@@ -83,6 +95,7 @@ export function DataProvider({ children }) {
   };
 
   useEffect(() => {
+    fetchProductsListings();
     fetchProducts();
     fetchHouse();
     fetNews();
@@ -95,6 +108,7 @@ export function DataProvider({ children }) {
     <DataContext.Provider
       value={{
         products,
+        productListings,
         research,
         house,
         news,

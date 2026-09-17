@@ -7,6 +7,9 @@ import DataContext from "@/context/DataContext";
 
 // icons imports
 import { GiVote } from "react-icons/gi";
+import { BsLeafFill } from "react-icons/bs";
+import { HiMiniWrenchScrewdriver } from "react-icons/hi2";
+
 import { BsClipboardDataFill } from "react-icons/bs";
 import { VscServerProcess } from "react-icons/vsc";
 import { RxCrossCircled } from "react-icons/rx";
@@ -28,7 +31,7 @@ const projects = [
     title: "Herveg Website",
     description: "Agricultural marketplace and services",
     url: "https://www.herveg.org/",
-    icon: <GiVote />,
+    icon: <BsLeafFill />,
     color: "from-green-500 to-emerald-500",
     tags: ["Agriculture", "UI/UX"],
   },
@@ -102,8 +105,8 @@ const projects = [
       "Aurora Marketplace is a digital marketplace for motorcycle spare parts, designed to connect suppliers, retailers, mechanics, riders, and other participants in the motorcycle aftermarket ecosystem.",
 
     url: "https://auroraspareparts.vercel.app/",
-    icon: <GiVote />,
-    color: "from-cyan-500 to-blue-500",
+    icon: <HiMiniWrenchScrewdriver />,
+    color: "from-green-500 to-blue-500",
     tags: ["History", "Research"],
   },
 ];
@@ -148,7 +151,7 @@ function MyProjects() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <div className="relative z-10 w-full min-h-screen">
+      <div className="relative  z-10 w-full min-h-screen">
         {/* Header */}
         <div className="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-xl border-b border-white/10 shadow-2xl">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -344,22 +347,6 @@ function MyProjects() {
           </motion.div>
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes gradient {
-          0%,
-          100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
     </div>
   );
 }

@@ -115,9 +115,9 @@ function page() {
                 <h3 className="text-xl font-semibold mb-3 text-emerald-300">
                   {newsItem.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed line-clamp-3">
+                {/* <p className="text-gray-400 leading-relaxed line-clamp-3">
                   {newsItem.content}
-                </p>
+                </p> */}
               </Card>
             ))
           ) : (
